@@ -6,7 +6,7 @@ import { AstroError } from 'astro/errors';
 import { z } from 'astro/zod';
 
 import { starlightViewModesIntegration } from './libs/integration';
-import icon from "astro-icon";
+// import icon from "astro-icon";
 
 const starlightViewModesConfigSchema = z
   .object({
@@ -223,7 +223,7 @@ export default function starlightViewModes(
           updatedConfig.components.Sidebar =
             'starlight-view-modes/overrides/Sidebar.astro';
         }
-        addIntegration(icon())
+        // addIntegration(icon())
         addIntegration(starlightViewModesIntegration(parsedConfig.data));
         updateConfig(updatedConfig);
       },

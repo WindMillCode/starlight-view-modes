@@ -1,8 +1,9 @@
 ---
 import type { Props } from '../props';
 import MobileMenuFooter from 'virtual:starlight/components/MobileMenuFooter';
+// import SidebarSublist from 'virtual:starlight/components/SidebarSublist.astro';
 import SidebarSublist from '../components/SidebarSublist.astro';
-import { Icon } from 'astro-icon/components';
+import IconChevronLeft from '../components/IconChevronLeft.astro';
 const { sidebar } = Astro.props;
 
 
@@ -29,7 +30,7 @@ const { sidebar } = Astro.props;
 <!-- tailwind doesnt work here -->
 <!-- <div class="toggle-main-side-bar-btn cursor-pointer border border-neutral-500 inline-flex flex-row justify-center items-center w-4 self-end"> -->
 <div class="toggle-main-side-bar-btn ">
-	<Icon name='mdi:chevron-left' />
+	<IconChevronLeft/>
 </div>
 <SidebarSublist sublist={sidebar} />
 <slot />
